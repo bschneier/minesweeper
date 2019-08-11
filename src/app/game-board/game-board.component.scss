@@ -1,0 +1,29 @@
+#gameHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: auto;
+}
+
+.game-heading-container {
+  width: 75px;
+  text-align: center;
+}
+
+.game-sub-header {
+  font-weight: bold;
+}
+
+#gameBoard {
+  margin: 25px;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.cell-row {
+  display: flex;
+  justify-content: center;
+}

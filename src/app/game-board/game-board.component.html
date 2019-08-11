@@ -1,0 +1,26 @@
+<div id="gameHeader">
+  <div class="game-heading-container">
+    <div class="game-sub-header">Time</div>
+    <div class="game-timer">{{time}}</div>
+  </div>
+  <button id="newGame" (click)="newGame()">New Game</button>
+  <div class="game-heading-container">
+    <div class="game-sub-header">Mines</div>
+    <div class="mines-counter">{{minesRemaining}}</div>
+  </div>
+</div>
+<div id="gameBoard" *ngIf="boardSize > 0">
+  <div *ngFor="let row of boardArray; index as rowIndex" class="cell-row">
+      <cell *ngFor="let column of boardArray; index as columnIndex"
+        [isOpen]="cells[(rowIndex * boardSize) + columnIndex].isOpen"
+        [isMine]="cells[(rowIndex * boardSize) + columnIndex].isMine"
+        [isActive]="!gameIsOver"
+        [minesTouching]="cells[(rowIndex * boardSize) + columnIndex].minesTouching"
+        (flaggedCell)="updateMinesRemaining($event)"
+        (openedCell)="handleOpenedCell((rowIndex * boardSize) + columnIndex)"
+        (openedMine)="handleOpenedMine()"
+        [isFirstColumn]="columnIndex === 0"
+        [isLastRow]="rowIndex === (boardSize - 1)">
+      </cell>
+  </div>  
+</div>

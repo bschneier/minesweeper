@@ -1,0 +1,7 @@
+<div class="cell" (click)="handleClick()" (contextmenu)="handleRightClick()"
+  [ngClass]="{'opened': isOpen, 'cell-last-row': isLastRow, 'cell-first-column': isFirstColumn}">
+  <img *ngIf="isFlagged" src="../../assets/flag.ico" alt="Flag">
+  <img *ngIf="showMine" src="../../assets/mine.ico" alt="Mine">
+  <img *ngIf="clickedMine" src="../../assets/open-mine.ico" alt="Opened mine">
+  <span *ngIf="isOpen && minesTouching" [ngClass]="'color' + minesTouching">{{minesTouching}}</span>
+</div>

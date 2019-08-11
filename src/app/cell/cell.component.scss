@@ -1,0 +1,58 @@
+.cell {
+  height: 20px;
+  width: 20px;
+  background: cornflowerblue;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  font-weight: bold;
+  text-align: center;
+
+  &.opened {
+    background: lightgray;
+  }
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .color1 {
+    color: blue;
+  }
+
+  .color2 {
+    color: green;
+  }
+
+  .color3 {
+    color: red;
+  }
+
+  .color4 {
+    color: purple;
+  }
+
+  .color5 {
+    color: maroon;
+  }
+
+  .color6 {
+    color: turquoise;
+  }
+
+  .color7 {
+    color: black;
+  }
+
+  .color8 {
+    color: gray;
+  }
+}
+
+.cell-last-row {
+  border-bottom: 1px solid black;
+}
+
+.cell-first-column {
+  border-left: 1px solid black;
+}
